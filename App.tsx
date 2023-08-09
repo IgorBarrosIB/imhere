@@ -1,5 +1,7 @@
 import React from "react";
 import { Text, SafeAreaView, StyleSheet } from "react-native";
+import styles from './style/styles';
+
 
 export default function App(){
   return (
@@ -8,17 +10,3 @@ export default function App(){
     </SafeAreaView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: 'black',
-    flex: 1,
-    alignContent: "center"
-  },
-  text: {
-    color: 'white',
-    fontWeight: "bold",
-    marginTop: 48, 
-    fontSize: 24
-  }
-})
