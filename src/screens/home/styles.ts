@@ -28,6 +28,7 @@ const styles = StyleSheet.create({
 	},
 	input: {
 		backgroundColor: '#00623B',
+		flex: 1, //Ocupa o todo o espaço restante
 		borderRadius: 30, 
 		color: '#FFF',
 		height: 56,
