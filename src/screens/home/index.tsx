@@ -2,6 +2,9 @@ import React from "react";
 import { Text, SafeAreaView, TextInput, TouchableOpacity, View } from "react-native";
 import styles from './styles';
 
+function handleParticipantAdd() {
+  alert('teste');
+}
 
 export function Home(){
   return (
@@ -15,8 +18,8 @@ export function Home(){
             placeholderTextColor="#FFF"
             />
 
-          <TouchableOpacity style={styles.button}>
-              <Text style={styles.buttonText}>Clique aqui</Text>
+          <TouchableOpacity style={styles.button} onPress={handleParticipantAdd}>
+              <Text style={styles.buttonText}>+</Text>
           </TouchableOpacity>
         </View>
       

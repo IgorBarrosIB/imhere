@@ -13,7 +13,8 @@ const styles = StyleSheet.create({
 		margin: 2,
 		marginHorizontal: 9, 
 		padding: 5,
-		borderRadius: 20
+		borderRadius: 20,
+		flexDirection: "row" // Direcionamento do botão
 	},
 	h1: {
 		fontSize: 30,
@@ -33,16 +34,19 @@ const styles = StyleSheet.create({
 		padding: 16,
 		margin: 12,
 		marginHorizontal: 5,
+		marginLeft: 10,
 		fontSize: 25,
 		fontWeight: "bold",
 	},
 	button: {
 		borderRadius: 30, 
 		margin: 5,
+		marginTop: 20,
 		backgroundColor: '#00623B',
 		height: 40,
 		alignItems: "center",
-		justifyContent: "center"
+		justifyContent: "center",
+		width: 40,
 	},
 	buttonText: {
 		color: 'white',
