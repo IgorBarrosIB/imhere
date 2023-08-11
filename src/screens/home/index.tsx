@@ -2,16 +2,22 @@ import React from "react";
 import { Text, SafeAreaView, TextInput, TouchableOpacity, View } from "react-native";
 import styles from './styles';
 
-function handleParticipantAdd() {
-  alert('teste');
-}
+//Componets
+import { Participant } from "../../components/Participant";
+
+
 
 export function Home(){
+  
+  function handleParticipantAdd() {
+    alert('teste');
+  }
+
   return (
     <SafeAreaView style={styles.container}>
         <Text style={styles.h1}>Eventos</Text>
 
-        <View style={styles.contents}>
+        <View style={styles.contentsAdd}>
           <TextInput 
             style={styles.input} 
             placeholder="Nome do participante"
@@ -20,8 +26,12 @@ export function Home(){
 
           <TouchableOpacity style={styles.button} onPress={handleParticipantAdd}>
               <Text style={styles.buttonText}>+</Text>
-          </TouchableOpacity>
+          </TouchableOpacity> 
         </View>
+        <View style={styles.contentsList}>
+          <Participant/>
+        </View>
+
       
     </SafeAreaView>
   );
