@@ -28,9 +28,8 @@ export function Home(){
               <Text style={styles.buttonText}>+</Text>
           </TouchableOpacity> 
         </View>
-        <View style={styles.contentsList}>
-          <Participant/>
-        </View>
+        <Participant/>
+        
 
       
     </SafeAreaView>

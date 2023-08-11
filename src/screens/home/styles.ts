@@ -17,15 +17,6 @@ const styles = StyleSheet.create({
 		borderRadius: 20,
 		flexDirection: "row" // Direcionamento do botão
 	},
-	contentsList:{
-		backgroundColor: '#FFF',
-		flex: 0,
-		height: 100,
-		margin: 2,
-		marginHorizontal: 9, 
-		padding: 5,
-		borderRadius: 20,
-	},
 	h1: {
 		fontSize: 30,
 		fontWeight: "bold",
