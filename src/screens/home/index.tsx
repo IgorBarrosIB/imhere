@@ -10,7 +10,7 @@ import { Participant } from "../../components/Participant";
 export function Home(){
   
   function handleParticipantAdd() {
-    alert('teste');
+    alert('Hellow horld');
   }
 
   return (
