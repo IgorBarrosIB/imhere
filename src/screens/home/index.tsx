@@ -13,6 +13,10 @@ export function Home(){
     alert('Testando');
   }
 
+  function handleParticipantRemoved(){
+    alert('Testando');
+  }
+
   return (
     <SafeAreaView style={styles.container}>
         <Text style={styles.h1}>Eventos</Text>
@@ -28,9 +32,9 @@ export function Home(){
               <Text style={styles.buttonText}>+</Text>
           </TouchableOpacity> 
         </View>
-        <Participant name="Igor Barros de Sousa"/>
-        <Participant name="Gabriel Teles"/>
-        <Participant name="Gustavo Santos"/>
+
+        <Participant name="Igor Barros de Sousa" onRemove={handleParticipantRemoved}/>
+        
     </SafeAreaView>
   );
 }
