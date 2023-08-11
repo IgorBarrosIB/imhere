@@ -29,6 +29,8 @@ export function Home(){
           </TouchableOpacity> 
         </View>
         <Participant/>
+        <Participant/>
+        <Participant/>
     </SafeAreaView>
   );
 }
