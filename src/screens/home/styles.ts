@@ -54,6 +54,21 @@ const styles = StyleSheet.create({
 		color: 'white',
 		fontSize: 24,
 		fontWeight: "bold"
+	},
+	ListEmptyComponent: {
+		color: 'white',
+    fontSize: 16,
+    fontWeight: "bold",
+    marginHorizontal: 5
+	},
+	FlatListComponent:{
+		backgroundColor: '#D9D07E',
+		borderRadius: 12,
+		height: 90,
+		alignContent: "center",
+		justifyContent: "center",
+		marginHorizontal: 12,
+    marginTop: 5
 	}
   });
   

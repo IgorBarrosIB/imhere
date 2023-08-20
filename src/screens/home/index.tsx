@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, SafeAreaView, TextInput, TouchableOpacity, View, ScrollView } from "react-native";
+import { Text, SafeAreaView, TextInput, TouchableOpacity, View, ScrollView, FlatList } from "react-native";
 import styles from './styles';
 
 //Componets
@@ -9,6 +9,7 @@ import { Participant } from "../../components/Participant";
 
 export function Home(){
   const participants = ['Igor Barros', 'Gabriel Teles', 'Gustavo Santos', 'Rodrigo Duarte', 'Jhonata', 'Mario', 'Marcio Malta', 'Marcio Gomes', 'Ellen', 'Taina', 'Jaqueline', 'Eliana', 'Paulo', 'Civio', 'Jaime'];
+  //const participants = [];
   
   function handleParticipantAdd() {
     alert('Testando');
@@ -34,15 +35,20 @@ export function Home(){
           </TouchableOpacity> 
         </View>
 
-        <ScrollView>
-          {
-            participants.map(participant => (
-              <Participant key={participant} name={participant} onRemove={() => handleParticipantRemoved('Igor')}/>
-            ))
-          }
-      </ScrollView>
-
-
+        <FlatList 
+          keyExtractor={item => item}
+          data={participants}
+          renderItem={({item}) => ( 
+            <Participant key={item} name={item} onRemove={() => handleParticipantRemoved('Igor')}/>
+          )}
+        showsHorizontalScrollIndicator={false}
+        ListEmptyComponent={
+          <View style={styles.FlatListComponent}>
+            <Text style={styles.ListEmptyComponent}>Não tem níguem na lista de participantes por favor adicione novas pessoas ao evento.</Text>
+          </View>
+        }
+        />
+    
     </SafeAreaView>
   );
 }
