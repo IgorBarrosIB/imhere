@@ -34,7 +34,7 @@ export function Home(){
           </TouchableOpacity> 
         </View>
 
-        <ScrollView>
+        <ScrollView showsVerticalScrollIndicator={false}>
           {
             participants.map(participant => (
               <Participant key={participant} name={participant} onRemove={() => handleParticipantRemoved('Igor')}/>
