@@ -18,7 +18,16 @@ export function Home(){
   }
 
   function handleParticipantRemoved(name:string){
-    alert(`Removendo: ${name}`);
+    return Alert.alert("Remover",`Você clicou em remover o participante ${name} ?`, [
+      {
+        text: "Não",
+        style: "cancel"
+      },
+      {
+        text: "Sim",
+        onPress: () => Alert.alert("Deletado!")
+      }
+    ]);
   }
 
   return (
@@ -41,7 +50,7 @@ export function Home(){
           keyExtractor={item => item}
           data={participants}
           renderItem={({item}) => ( 
-            <Participant key={item} name={item} onRemove={() => handleParticipantRemoved('Igor')}/>
+            <Participant key={item} name={item} onRemove={() => handleParticipantRemoved(item)}/>
           )}
         showsHorizontalScrollIndicator={false}
         ListEmptyComponent={
