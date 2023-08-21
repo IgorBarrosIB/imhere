@@ -1,20 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import { Text, SafeAreaView, TextInput, TouchableOpacity, View, ScrollView, FlatList, Alert } from "react-native";
 import styles from './styles';
 
 //Componets
 import { Participant } from "../../components/Participant";
 
-
-
 export function Home(){
-  const participants = ['Igor Barros', 'Gabriel Teles', 'Gustavo Santos', 'Rodrigo Duarte', 'Jhonata', 'Mario', 'Marcio Malta', 'Marcio Gomes', 'Ellen', 'Taina', 'Jaqueline', 'Eliana', 'Paulo', 'Civio', 'Jaime'];
+  const participants = ['Gustavo'];
   //const participants = [];
   
   function handleParticipantAdd() {
     if(participants.includes("Igor Barros")){
       return Alert.alert("Participante existe", "Já existe um participante com esse nome.");
     }
+
+    participants.push("Anna");
+    console.log(participants);
   }
 
   function handleParticipantRemoved(name:string){
