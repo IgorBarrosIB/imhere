@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, SafeAreaView, TextInput, TouchableOpacity, View, ScrollView, FlatList } from "react-native";
+import { Text, SafeAreaView, TextInput, TouchableOpacity, View, ScrollView, FlatList, Alert } from "react-native";
 import styles from './styles';
 
 //Componets
@@ -12,7 +12,9 @@ export function Home(){
   //const participants = [];
   
   function handleParticipantAdd() {
-    alert('Testando');
+    if(participants.includes("Igor Barros")){
+      return Alert.alert("Participante existe", "Já existe um participante com esse nome.");
+    }
   }
 
   function handleParticipantRemoved(name:string){
