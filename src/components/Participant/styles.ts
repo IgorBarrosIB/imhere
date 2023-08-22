@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
 		borderRadius: 20,
     flexDirection: "row", // Direcionamento do botão
     alignItems: "center",
-		justifyContent: "center",
+	justifyContent: "center",
 	},
   name: {
     color: '#00623B',

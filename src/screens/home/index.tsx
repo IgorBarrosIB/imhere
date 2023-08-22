@@ -8,13 +8,14 @@ import { Participant } from "../../components/Participant";
 export function Home(){
 
   // Estato 
-  const [participants, setParticipants] =  useState(["Gustavo"]);
+  const [participants, setParticipants] =  useState<string[]>([]);
+  const [participantName, setParticipantName] =  useState("");
 
   //const participants = ['Gustavo'];
   //const participants = [];
   
   function handleParticipantAdd() {
-    if(participants.includes("Igor Barros")){
+    if(participants.includes(participantName)){
       return Alert.alert("Participante existe", "Já existe um participante com esse nome.");
     }
     setParticipants(prevState => [...prevState, "Anna"]);
