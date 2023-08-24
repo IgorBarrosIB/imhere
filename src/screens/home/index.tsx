@@ -25,9 +25,6 @@ export function Home(){
   function handleParticipantRemoved(name:string){
     //return console.log(participants);
     //return console.log(participants.filter(participants => participants !== name));
-    
-    
-
     return Alert.alert("Remover",`Você clicou em remover o participante ${name} ?`, [
       {
         text: "Não",
@@ -40,6 +37,11 @@ export function Home(){
     ]);
   }
 
+  function handleState(value: string){
+    setParticipantName(value);
+    console.log(participantName);
+  }
+
   return (
     <SafeAreaView style={styles.container}>
         <Text style={styles.h1}>Eventos</Text>
@@ -49,7 +51,7 @@ export function Home(){
             style={styles.input} 
             placeholder="Nome do participante"
             placeholderTextColor="#FFF"
-            onChangeText={setParticipantName}
+            onChangeText={setParticipantName} //handleState
             value={participantName}
             />
 
